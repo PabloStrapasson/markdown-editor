@@ -5,13 +5,17 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from "rehype-sanitize";
+import Menu from '@/components/menu';
 
 export default function Home() {
   const [content, setContent] = useState<string>(`# Olá, Markdown!`)
+  const [fileName, setFileName] = useState("Documento_sem_título");
 
   return (
     <div className="flex flex-col items-center justify-items-center min-h-screen gap-16 pt-20 pb-4 px-4 font-[family-name:var(--font-geist-sans)] bg-background">
       <main className="w-full h-screen-minus-20 flex gap-[16px] row-start-2 items-center sm:items-start">
+
+      <Menu fileName={fileName} content={content} setFileName={setFileName}/>
         
         <div className='w-1/2 h-full rounded-md border-gray-400/20 border'>
           <textarea
@@ -29,8 +33,7 @@ export default function Home() {
           </div>
         </div>
         
-      </main>
-      
+      </main>     
     </div>
   );
 }
