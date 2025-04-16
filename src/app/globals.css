@@ -2,13 +2,20 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
+  --background: #F3F3F4;
   --foreground: #171717;
+  --background-editor: #F3F3F4;
+  --background-menu: #25313D;
+  --text-editor: #232323;
+  --text-editor-dark: #F3F3F4;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-menu: var(--background-menu);
+  --color-erie-black: var(--text-editor);
+  --color-anti-flash-white: var(--text-editor-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
@@ -17,7 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #171717;
     --foreground: #ededed;
   }
 }
