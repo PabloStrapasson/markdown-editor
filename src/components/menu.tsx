@@ -18,7 +18,7 @@ export default function Menu({ fileName, content, setFileName }: MenuProps) {
         <div className="flex w-full items-center justify-between px-4"> 
             <div className='flex items-center justify-center gap-4'>
               
-              <button className='flex flex-col gap-1 cursor-pointer hover:border-b-1 focus:outiline-0' 
+              <button className='flex flex-col gap-1 cursor-pointer text-white hover:border-b-1 focus:outiline-0' 
                       onClick={() => setIsOpen(!isOpen)}
                       aria-label='Menu'>
                   Arquivo
@@ -27,7 +27,7 @@ export default function Menu({ fileName, content, setFileName }: MenuProps) {
               <Link href="https://www.markdownguide.org/cheat-sheet/" target='_blank' className="text-white text-md hover:border-b-1">Documentação Markdown</Link>
               
               <input type='text' placeholder='Documento sem título' 
-                     className='border border-gray-400 outline-0 px-2 rounded-sm'
+                     className='text-white border border-gray-400 outline-0 px-2 rounded-sm'
                      value={fileName}
                      onChange={(e) => setFileName(e.target.value)}
                      ></input>
